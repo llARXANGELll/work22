@@ -17,7 +17,7 @@ public class LoginPage {
     public LoginPage passwordInput(String password) {
 
         $(By.name("password")).clear();
-        $(By.name("password")).sendKeys(password);
+        $(By.name("password")).setValue(password);
         return this;
     }
 
