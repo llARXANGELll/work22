@@ -15,7 +15,8 @@ public class Work23Test {
     public void Login() {
         open("https://idemo.bspb.ru/");
         LoginPage login = new LoginPage();
-        login.loginInput("demo")
+        login.verificationTitile()
+                .loginInput("demo")
                 .passwordInput("demo")
                 .loginButton();
 

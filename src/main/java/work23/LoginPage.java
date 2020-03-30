@@ -1,9 +1,12 @@
 package work23;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
 public class LoginPage {
 
@@ -23,6 +26,11 @@ public class LoginPage {
 
     public LoginPage loginButton() {
         $(By.id("login-button")).click();
+        return this;
+    }
+
+    public LoginPage verificationTitile() {
+        Assert.assertEquals(getWebDriver().getTitle(),"Интернет банк - Банк Санкт-Петербург");
         return this;
     }
 
