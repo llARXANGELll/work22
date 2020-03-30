@@ -1,6 +1,7 @@
 package work23;
 
 import io.qameta.allure.Step;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
@@ -12,7 +13,7 @@ public class Work23Test {
 
     @Step("Вход в систему под учетной записью demo/demo")
     public void Login() {
-        open("https://idemo.bspb.ru");
+        open("https://idemo.bspb.ru/");
         LoginPage login = new LoginPage();
         login.loginInput("demo")
                 .passwordInput("demo")
