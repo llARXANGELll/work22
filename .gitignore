@@ -4,3 +4,5 @@
 Log
 target
 debug.log
+.allure
+build
