@@ -19,7 +19,6 @@ public class Work23Test {
                 .loginInput("demo")
                 .passwordInput("demo")
                 .loginButton();
-
     }
 
     @Step("Ввод в поле ввода кода подвтержения и нажатие на кнопку, и нажатие на кнопку войти")
