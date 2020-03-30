@@ -32,11 +32,6 @@
       <artifactId>selenide</artifactId>
       <version>5.10.0</version>
     </dependency>
-    <dependency>
-      <groupId>net.lightbody.bmp</groupId>
-      <artifactId>browsermob-core</artifactId>
-      <version>2.1.5</version>
-    </dependency>
   </dependencies>
 
   <build>
