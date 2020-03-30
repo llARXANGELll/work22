@@ -29,8 +29,8 @@ public class LoginPage {
         return this;
     }
 
-    public LoginPage verificationTitile() {
-        Assert.assertEquals(getWebDriver().getTitle(),"Интернет банк - Банк Санкт-Петербург");
+    public LoginPage verificationTitile(String expectedTitle) {
+        Assert.assertEquals(getWebDriver().getTitle(),expectedTitle);
         return this;
     }
 

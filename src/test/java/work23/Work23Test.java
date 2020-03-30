@@ -15,7 +15,7 @@ public class Work23Test {
     public void Login() {
         open("https://idemo.bspb.ru/");
         LoginPage login = new LoginPage();
-        login.verificationTitile()
+        login.verificationTitile("Интернет банк - Банк Санкт-Петербург")
                 .loginInput("demo")
                 .passwordInput("demo")
                 .loginButton();
