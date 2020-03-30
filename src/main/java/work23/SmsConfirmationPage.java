@@ -9,6 +9,7 @@ public class SmsConfirmationPage {
     public SmsConfirmationPage otpCode (String otpCode) {
         $(By.name("otp-code")).clear();
         $(By.name("otp-code")).sendKeys(otpCode);
+        $(By.name("otp-code")).click();
         return this;
     }
 

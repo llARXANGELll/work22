@@ -8,7 +8,9 @@ import static com.codeborne.selenide.Selenide.open;
 @Test
 public class Work23Test {
 
-    @Step
+    OverviewTabPage overviewTabPage = new OverviewTabPage();
+
+    @Step("Вход в систему под учетной записью demo/demo")
     public void Login() {
         open("https://idemo.bspb.ru");
         LoginPage login = new LoginPage();
@@ -18,20 +20,21 @@ public class Work23Test {
 
     }
 
-    @Step
+    @Step("Ввод в поле ввода кода подвтержения и нажатие на кнопку, и нажатие на кнопку войти")
     public void SmsConfirmation() {
        SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
        smsConfirmationPage.otpCode("0000")
                .inputButton();
     }
 
-    @Step
+    @Step("Переход через верхнее меню в раздел Обзор")
     public void OverviewTab() {
-        OverviewTabPage overviewTabPage = new OverviewTabPage();
         overviewTabPage.overviewButton()
-                .amountMoney()
-                .myMoney();
+                .amountMoney();
     }
 
-
+    @Step("Наведение курсора на сумму в блоке Финансовая свобода")
+    public void MoveMouse() {
+        overviewTabPage.myMoney();
+    }
 }
