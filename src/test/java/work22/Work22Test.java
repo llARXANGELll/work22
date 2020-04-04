@@ -4,6 +4,7 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,6 +23,8 @@ public class Work22Test {
         $(By.id("login-otp-button")).click();
         $(By.id("bank-overview")).click();
         $(By.xpath("//div[2]/div/div/span/span[normalize-space(@class='amount')]")).shouldHave(text("2 718 764.83 ₽"));
-        $(By.className("my-assets")).waitWhile(text("Моих средств 2 936 972.64 ₽"),50);
+        WebElement myMoney = $(By.className("my-assets"));
+        Selenide.actions().moveToElement(myMoney).perform();
+        Assert.assertEquals(myMoney.getText(), "Моих средств 2 936 972.64 ₽");
     }
 }
