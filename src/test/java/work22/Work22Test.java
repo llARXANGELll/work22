@@ -17,7 +17,6 @@ public class Work22Test {
 
     @Test
     public void work22() {
-
         open("https://idemo.bspb.ru");
         $(By.id("login-button")).click();
         $(By.id("login-otp-button")).click();
