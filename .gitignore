@@ -6,3 +6,5 @@ target
 debug.log
 .allure
 build
+allure-results
+build

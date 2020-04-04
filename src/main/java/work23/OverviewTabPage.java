@@ -1,5 +1,6 @@
 package work23;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,17 +15,19 @@ import static com.codeborne.selenide.Selenide.$;
 public class OverviewTabPage {
 
     WebDriver webDriver;
-
+    @Step("Нажимаем на кнопку Обзор")
     public OverviewTabPage overviewButton() {
         $(By.id("bank-overview")).click();
         return  this;
     }
 
+    @Step("Проверяет отображаемую сумму")
     public OverviewTabPage amountMoney () {
         $((By.xpath("//div[2]/div/div/span/span[normalize-space(@class='amount')]"))).shouldHave(text("2 718 764.83 ₽"));
         return this;
     }
 
+    @Step("Проверяет появляющееся сумму при наведении мышки")
     public OverviewTabPage myMoney () {
         WebElement amount = $(By.xpath("//div[2]/div/div/span/span[normalize-space(@class='amount')]"));
         WebElement myMoney = $(By.className("my-assets"));

@@ -6,12 +6,14 @@ import org.testng.annotations.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-@Test
+
+
 public class Work23Test {
 
     OverviewTabPage overviewTabPage = new OverviewTabPage();
 
-    @Step("Вход в систему под учетной записью demo/demo")
+
+    @Test
     public void Login() {
         open("https://idemo.bspb.ru/");
         LoginPage login = new LoginPage();
@@ -21,20 +23,23 @@ public class Work23Test {
                 .loginButton();
     }
 
-    @Step("Ввод в поле ввода кода подвтержения и нажатие на кнопку, и нажатие на кнопку войти")
+
+    @Test
     public void SmsConfirmation() {
        SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
        smsConfirmationPage.otpCode("0000")
                .inputButton();
     }
 
-    @Step("Переход через верхнее меню в раздел Обзор")
+
+    @Test
     public void OverviewTab() {
         overviewTabPage.overviewButton()
                 .amountMoney();
     }
 
-    @Step("Наведение курсора на сумму в блоке Финансовая свобода")
+
+    @Test
     public void MoveMouse() {
         overviewTabPage.myMoney();
     }
