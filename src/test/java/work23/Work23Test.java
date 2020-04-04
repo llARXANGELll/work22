@@ -14,33 +14,21 @@ public class Work23Test {
 
 
     @Test
-    public void Login() {
+    public void oneTest() {
         open("https://idemo.bspb.ru/");
         LoginPage login = new LoginPage();
         login.verificationTitile("Интернет банк - Банк Санкт-Петербург")
                 .loginInput("demo")
                 .passwordInput("demo")
                 .loginButton();
-    }
 
-
-    @Test
-    public void SmsConfirmation() {
        SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
        smsConfirmationPage.smsCode("0000")
                .inputButtonCode();
-    }
 
-
-    @Test
-    public void OverviewTab() {
         overviewTabPage.overviewButton()
                 .amountMoney();
-    }
 
-
-    @Test
-    public void MoveMouse() {
         overviewTabPage.myMoney();
     }
 }
