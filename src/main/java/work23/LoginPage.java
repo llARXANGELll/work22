@@ -37,5 +37,4 @@ public class LoginPage {
         Assert.assertEquals(getWebDriver().getTitle(),expectedTitle);
         return this;
     }
-
 }
