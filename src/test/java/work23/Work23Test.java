@@ -27,8 +27,8 @@ public class Work23Test {
     @Test
     public void SmsConfirmation() {
        SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
-       smsConfirmationPage.otpCode("0000")
-               .inputButton();
+       smsConfirmationPage.smsCode("0000")
+               .inputButtonCode();
     }
 
 
