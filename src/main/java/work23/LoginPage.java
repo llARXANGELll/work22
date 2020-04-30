@@ -26,6 +26,7 @@ public class LoginPage {
         $(By.name("password")).setValue(password);
         return this;
     }
+
     @Step("Нажимаем войти")
     public LoginPage loginButton() {
         $(By.id("login-button")).click();
@@ -34,7 +35,7 @@ public class LoginPage {
 
     @Step("Проверяем что страница соотвествует нужной")
     public LoginPage verificationTitile(String expectedTitle) {
-        Assert.assertEquals(getWebDriver().getTitle(),expectedTitle);
+        Assert.assertEquals(getWebDriver().getTitle(), expectedTitle);
         return this;
     }
 }

@@ -22,9 +22,9 @@ public class Work23Test {
                 .passwordInput("demo")
                 .loginButton();
 
-       SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
-       smsConfirmationPage.smsCode("0000")
-               .inputButtonCode();
+        SmsConfirmationPage smsConfirmationPage = new SmsConfirmationPage();
+        smsConfirmationPage.smsCode("0000")
+                .inputButtonCode();
 
         overviewTabPage.overviewButton()
                 .amountMoney();
